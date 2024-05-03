@@ -15,9 +15,27 @@ Here is a full description about setting up a Jasmine Demo from Scratch
 
 ## Deploy Jasmine Demo
 1. Clone the [Jasmine Repository](https://github.com/SirrahErydya/jasmine) and checkout the [webdemo](https://github.com/SirrahErydya/jasmine/tree/webdemo) branch
-2. Navigate into the top folder of the repository and create a folder named `surveys`
-3. Paste the survey folder from the previous steps into `surveys`
-4. Open a terminal inside the top folder and install all `Node.js` requirements via `npm install`
-5. Run a demo webserver with `npx vite`
-6. Open the local address (usually `localhost:5173`) with your browser
+
+```
+git clone --recurse-submodules --branch webdemo https://github.com/SirrahErydya/jasmine 
+```
+
+2. Install aladin-lite (https://github.com/cds-astro/aladin-lite?tab=readme-ov-file#building-the-application-steps)
+
+```
+cd aladin-lite
+npm install
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+. "$HOME/.cargo/env"
+rustup default nightly
+cargo install wasm-pack --version ~0.12
+npm run build
+```  
+
+3. Navigate into the top folder of the repository and create a folder named `surveys`
+4. Paste the survey folder from the previous steps into `surveys`
+5. Open a terminal inside the top folder and install all `Node.js` requirements via `npm install`
+6. Run a demo webserver with `npx vite`
+7. Open the local address (usually `localhost:5173`) with your browser
+
 Enjoy Jasmine!
